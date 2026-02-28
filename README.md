@@ -1,16 +1,157 @@
-# React + Vite
+# 🚀 PopX Authentication UI (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and responsive authentication UI built using **React + React Router (Vite setup)**.  
+This project simulates a mobile-style app layout with multi-step navigation, reusable components, and clean UI structure.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📱 Project Overview
 
-## React Compiler
+PopX is a front-end authentication flow that includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Welcome Screen
+- Login Page
+- Register Page
+- Account Page
+- Bottom Navigation
+- Step Indicator (1–4)
 
-## Expanding the ESLint configuration
+The layout mimics a **mobile application interface (375px width)** centered on desktop screens.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- React (Functional Components)
+- React Router DOM
+- Vite
+- CSS (Custom styling)
+- React Hooks (useState, useNavigate, useLocation)
+
+---
+
+## 📁 Folder Structure
+
+
+src/
+│
+├── components/
+│ ├── Header.jsx
+│ ├── Button.jsx
+│ ├── InputField.jsx
+│ ├── StepIndicator.jsx
+│ └── BottomNav.jsx
+│
+├── pages/
+│ ├── Welcome.jsx
+│ ├── Login.jsx
+│ ├── Register.jsx
+│ └── Account.jsx
+│
+├── layout/
+│ └── Layout.jsx
+│
+├── App.jsx
+├── main.jsx
+├── App.css
+└── index.css
+
+
+---
+
+## 🧩 Features
+
+### ✅ Reusable Components
+- Custom Button component
+- Input fields with controlled state
+- Header with back navigation
+- Step progress indicator
+- Bottom navigation bar
+
+### ✅ Multi-Step Flow
+The step indicator dynamically updates based on current route:
+
+| Route | Step |
+|-------|------|
+| / | Step 1 |
+| /signin | Step 2 |
+| /create-account | Step 3 |
+| /account | Step 4 |
+
+### ✅ Mobile UI Layout
+- Fixed mobile frame (375px)
+- Centered layout on desktop
+- Scrollable content area
+- Fixed bottom navigation
+
+### ✅ Form Handling
+- Controlled inputs using useState
+- Dynamic validation for required fields
+- Disabled button when form is incomplete
+
+---
+
+## 🧠 Architecture Highlights
+
+- Layout wrapper using `Outlet`
+- Route-based step detection using `useLocation`
+- Clean separation of:
+  - UI (components)
+  - Logic (pages)
+  - Layout handling
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Install dependencies
+
+```bash
+npm install
+2️⃣ Start development server
+npm run dev
+3️⃣ Open in browser
+http://localhost:5173
+🎯 What This Project Demonstrates
+
+1.React component architecture
+
+2.Routing with React Router v6
+
+3.Controlled form components
+
+4.Layout composition
+
+5.CSS organization
+
+6.Mobile-first UI thinking
+
+7.Clean state management
+
+🚀 Future Improvements
+
+1.Add form validation with error messages
+
+2.Add Protected Routes
+
+3.Add authentication context
+
+4.Convert project to TypeScript
+
+5.Add dark mode
+
+6.Connect to real backend API
+
+📸 Screens Included
+
+1.Welcome Page
+
+2.Login Page
+
+3.Register Page
+
+4.Account Page
+
+5.Bottom Navigation
+
+6.Step Indicator
